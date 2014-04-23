@@ -1,0 +1,16 @@
+{
+  "manifest_version" : 2,
+  "name" : "JIRA/Confluence Training Bar Hider",
+  "version" : "1.0.0",
+  "description": "Tool for hiding the omnipresent Atlassian Training Notification Bar",
+  "content_scripts" : [{
+	"all_frames": true,
+	"js" : ["jquery-2.1.0.min.js", "background.js"],
+	"matches" : [ "https://jira.workday.com/browse/*" ],
+  }],
+  "permissions": [
+	"tabs",
+    "activeTab",
+	"*://*/*"
+  ]
+}
